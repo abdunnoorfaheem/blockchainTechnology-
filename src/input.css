@@ -3,4 +3,7 @@
 @theme{
   --spacing-mContainer: 1320px; 
    --font-poppins: "Poppins", "sans-serif"; 
+  
+   --shadow-shadowBtn:0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }

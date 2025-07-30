@@ -9,7 +9,10 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
+    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --spacing-mContainer: 1320px;
@@ -165,11 +168,71 @@
   .m-auto {
     margin: auto;
   }
+  .m-mContainer {
+    margin: var(--spacing-mContainer);
+  }
+  .mr-1 {
+    margin-right: calc(var(--spacing) * 1);
+  }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
+  }
+  .mb-\[50px\] {
+    margin-bottom: 50px;
+  }
+  .ml-\[20px\] {
+    margin-left: 20px;
+  }
+  .ml-\[120px\] {
+    margin-left: 120px;
+  }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
   .table {
     display: table;
+  }
+  .w-\[10px\] {
+    width: 10px;
+  }
+  .w-\[25\%\] {
+    width: 25%;
+  }
+  .w-\[75\%\] {
+    width: 75%;
+  }
+  .w-\[100px\] {
+    width: 100px;
+  }
+  .w-\[210px\] {
+    width: 210px;
+  }
+  .w-\[340px\] {
+    width: 340px;
+  }
+  .w-\[380px\] {
+    width: 380px;
+  }
+  .w-mContainer {
+    width: var(--spacing-mContainer);
+  }
+  .max-w-\[10px\] {
+    max-width: 10px;
+  }
+  .max-w-\[100px\] {
+    max-width: 100px;
+  }
+  .max-w-\[180px\] {
+    max-width: 180px;
+  }
+  .max-w-\[210px\] {
+    max-width: 210px;
   }
   .max-w-mContainer {
     max-width: var(--spacing-mContainer);
@@ -192,24 +255,48 @@
   .rounded-\[24px\] {
     border-radius: 24px;
   }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-white {
+    border-color: var(--color-white);
+  }
   .bg-\[\#1E1E1E\] {
     background-color: #1E1E1E;
   }
-  .bg-\[\#1E\] {
-    background-color: #1E;
+  .bg-\[\#2E2E2E\] {
+    background-color: #2E2E2E;
   }
-  .bg-\[\#1\] {
-    background-color: #1;
+  .bg-\[1E1E1E\] {
+    background-color: 1E1E1E;
+  }
+  .bg-\[1\] {
+    background-color: 1;
   }
   .px-\[14px\] {
     padding-inline: 14px;
   }
+  .px-\[22px\] {
+    padding-inline: 22px;
+  }
+  .px-\[45px\] {
+    padding-inline: 45px;
+  }
   .py-\[14px\] {
     padding-block: 14px;
+  }
+  .py-\[16px\] {
+    padding-block: 16px;
+  }
+  .py-\[33px\] {
+    padding-block: 33px;
+  }
+  .py-\[50px\] {
+    padding-block: 50px;
   }
   .py-\[60px\] {
     padding-block: 60px;
@@ -220,11 +307,23 @@
   .pb-\[93px\] {
     padding-bottom: 93px;
   }
+  .pl-1 {
+    padding-left: calc(var(--spacing) * 1);
+  }
+  .pl-15 {
+    padding-left: calc(var(--spacing) * 15);
+  }
   .pl-\[73px\] {
     padding-left: 73px;
   }
   .font-poppins {
     font-family: var(--font-poppins);
+  }
+  .text-\[4px\] {
+    font-size: 4px;
+  }
+  .text-\[10px\] {
+    font-size: 10px;
   }
   .text-\[14px\] {
     font-size: 14px;
@@ -232,9 +331,33 @@
   .text-\[16px\] {
     font-size: 16px;
   }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
+  .text-\[34px\] {
+    font-size: 34px;
+  }
+  .text-\[40px\] {
+    font-size: 40px;
+  }
+  .leading-\[30px\] {
+    --tw-leading: 30px;
+    line-height: 30px;
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .text-\[40\] {
+    color: 40;
   }
   .text-white {
     color: var(--color-white);
@@ -244,6 +367,9 @@
   }
   .opacity-50 {
     opacity: 50%;
+  }
+  .opacity-\[0\.63\] {
+    opacity: 0.63;
   }
   .opacity-\[47\%\] {
     opacity: 47%;
@@ -258,6 +384,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -271,6 +401,7 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
     }
